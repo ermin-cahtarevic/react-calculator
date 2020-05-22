@@ -1,9 +1,9 @@
 import operate from './operate';
 
 const calculate = (calculator, btnName) => {
-  const { total, next, operation } = calculator;
-  
-  switch(btnName) {
+  let { total, next, operation } = calculator;
+
+  switch (btnName) {
     case 'AC':
       total = null;
       next = null;
@@ -41,7 +41,7 @@ const calculate = (calculator, btnName) => {
       else next += btnName;
   }
 
-  return { total, next, operation }
-}
+  return { total, next, operation };
+};
 
 export default calculate;
