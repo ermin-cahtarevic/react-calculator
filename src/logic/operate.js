@@ -18,6 +18,14 @@ const operate = (numberOne, numberTwo, operation) => {
     } else {
       total = numOne.div(numTwo).toString();
     }
+  } else if (operation === '%') {
+    if (!numTwo) {
+      total = numOne.times(0.01).toString();
+    } else {
+      total = (numOne.times(numTwo)).times(0.01).toString();
+    }
+  } else {
+    total = '0';
   }
 
   return total;
