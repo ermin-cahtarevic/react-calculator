@@ -9,7 +9,6 @@ import calculate from '../logic/calculate';
 class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       result: 0,
     };
