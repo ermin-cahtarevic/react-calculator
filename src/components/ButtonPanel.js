@@ -3,8 +3,8 @@ import Button from './Button';
 import '../styles/ButtonPanel.css';
 
 const ButtonPanel = () => {
-  const white = "rgb(224, 224, 224)";
-  const orange = "rgb(189, 120, 8)"
+  const white = 'rgb(224, 224, 224)';
+  const orange = 'rgb(189, 120, 8)';
   return (
     <div className="btn-panel">
       <div className="btn-group">
@@ -32,12 +32,12 @@ const ButtonPanel = () => {
         <Button buttonName="+" color={orange} />
       </div>
       <div className="btn-group group-5">
-        <Button buttonName="0" color={white} wide={true} />
+        <Button buttonName="0" color={white} wide />
         <Button buttonName="." color={white} />
         <Button buttonName="=" color={orange} />
       </div>
     </div>
   );
-}
+};
 
 export default ButtonPanel;

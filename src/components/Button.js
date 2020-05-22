@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import '../styles/Button.css';
 
 const Button = ({ buttonName, color, wide }) => (
-  <button 
-    className="button" 
+  <button
+    className="button"
     type="button"
-    style={{ 
+    style={{
       backgroundColor: color,
-      width: wide ? '50%' : null, 
+      width: wide ? '50%' : null,
     }}
   >
     {buttonName}
@@ -23,7 +23,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   color: 'rgb(189, 120, 8)',
-  wide: false
+  wide: false,
 };
 
 export default Button;
