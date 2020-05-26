@@ -8,7 +8,7 @@ const Button = ({ buttonName, color, wide }) => (
     type="button"
     style={{
       backgroundColor: color,
-      width: wide ? '50%' : null,
+      width: wide ? '50%' : '25%',
     }}
   >
     {buttonName}
