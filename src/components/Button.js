@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Button.css';
 
-const Button = ({ buttonName, color, wide, clickHandler }) => {
-  const handleClick = (buttonName) => (
+const Button = ({
+  buttonName, color, wide, clickHandler,
+}) => {
+  const handleClick = buttonName => (
     clickHandler(buttonName)
-  )
+  );
 
   return (
     <button
@@ -20,12 +22,13 @@ const Button = ({ buttonName, color, wide, clickHandler }) => {
       {buttonName}
     </button>
   );
-}
+};
 
 Button.propTypes = {
   buttonName: PropTypes.string.isRequired,
   color: PropTypes.string,
   wide: PropTypes.bool,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {

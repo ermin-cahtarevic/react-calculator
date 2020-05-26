@@ -10,4 +10,5 @@
   border: 2px solid rgb(0, 0, 0);
   border-bottom: none;
   border-radius: 10px 10px 0 0;
+  overflow-x: hidden;
 }
