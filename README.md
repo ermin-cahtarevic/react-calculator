@@ -10,6 +10,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+![screenshot](./public/react-calculator.png)
+
 In this project, I created a calculator using React for a fictional company named "Math-magicians"
 
 Live version of the project: [Live version](https://react-calculator-ermin.herokuapp.com/)

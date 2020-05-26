@@ -1,0 +1,23 @@
+.btn-panel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-group {
+  height: 100px;
+}
+
+.group-5 button:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.group-5 button:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.group-5 button:first-child:focus,
+.group-5 button:last-child:focus {
+  outline: none;
+}

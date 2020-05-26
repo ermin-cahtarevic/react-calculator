@@ -1,0 +1,11 @@
+.button {
+  width: 25%;
+  height: 100%;
+  border: 1px solid #000;
+  font-size: 32px;
+}
+
+.button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}
