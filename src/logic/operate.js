@@ -7,28 +7,28 @@ const operate = (numberOne, numberTwo, operation) => {
   let total;
 
   if (operation === '+') {
-    total = numOne.plus(numTwo).toString();
+    total = numOne.plus(numTwo);
   } else if (operation === '-') {
-    total = numOne.minus(numTwo).toString();
+    total = numOne.minus(numTwo);
   } else if (operation === '×') {
-    total = numOne.times(numTwo).toString();
+    total = numOne.times(numTwo);
   } else if (operation === '÷') {
     if (numTwo.eq(0)) {
-      total = 'Division by zero is undefined';
+      total = '0';
     } else {
-      total = numOne.div(numTwo).toString();
+      total = numOne.div(numTwo);
     }
   } else if (operation === '%') {
     if (!numTwo) {
-      total = numOne.times(0.01).toString();
+      total = numOne.times(0.01);
     } else {
-      total = (numOne.times(numTwo)).times(0.01).toString();
+      total = (numOne.times(numTwo)).times(0.01);
     }
   } else {
     total = '0';
   }
 
-  return total;
+  return total.toString();
 };
 
 export default operate;
