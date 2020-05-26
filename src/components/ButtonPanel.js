@@ -2,17 +2,21 @@ import React from 'react';
 import Button from './Button';
 import '../styles/ButtonPanel.css';
 
-const ButtonPanel = () => {
-  const white = 'rgb(224, 224, 224)';
-  const orange = 'rgb(189, 120, 8)';
+const white = 'rgb(224, 224, 224)';
+const orange = 'rgb(189, 120, 8)';
 
-  const groups = [
-    ['AC', '+/-', '%', '÷'],
-    ['7', '8', '9', '×'],
-    ['4', '5', '6', '-'],
-    ['1', '2', '3', '+'],
-    ['0', '.', '='],
-  ];
+const groups = [
+  ['AC', '+/-', '%', '÷'],
+  ['7', '8', '9', '×'],
+  ['4', '5', '6', '-'],
+  ['1', '2', '3', '+'],
+  ['0', '.', '='],
+];
+
+const ButtonPanel = ({ clickHandler }) => {
+  const handleClick = (buttonName) => (
+    clickHandler(buttonName)
+  )
 
   return (
     <div className="btn-panel">
@@ -26,6 +30,7 @@ const ButtonPanel = () => {
                   buttonName={sym}
                   color={group.indexOf(sym) === group.length - 1 ? orange : white}
                   wide={sym === '0'}
+                  clickHandler={() => handleClick(sym)}
                 />
               ))
             }
