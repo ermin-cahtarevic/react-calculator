@@ -4,6 +4,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Setup](#setup)
 * [Author](#author)
 * [Show your Support](#show-your-support)
 * [Acknowledgements](#acknowledgements)
@@ -27,6 +28,27 @@ Project Link: [React-Calculator](https://github.com/ermin-cahtarevic/react-calcu
 *   CSS
 *   ES6
 
+## Setup
+
+```
+git clone git@github.com:ermin-cahtarevic/react-calculator.git
+```
+
+### Start Development Server
+
+```
+npm start
+```
+### Visit this link in your browser
+```
+http://localhost:3000/
+```
+
+### Run eslint
+
+```
+npx eslint .
+```
 
 <!-- CONTACT -->
 ## Author
