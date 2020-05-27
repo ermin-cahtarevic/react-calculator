@@ -10,25 +10,33 @@ const calculate = (calculator, btnName) => {
       operation = null;
       break;
     case '+/-':
-      total *= -1;
-      if (next) next *= -1;
+      if (next) next = `${next * -1}`;
+      else if (total) total = `${total * -1}`;
+
       break;
     case '+':
     case '-':
     case '×':
     case '÷':
     case '%':
-      if (next && operation) total = operate(total, next, operation);
-
-      next = null;
+      if (!total) break;
+      if (next && operation) {
+        total = operate(total, next, operation);
+        next = null;
+      }
       operation = btnName;
       break;
     case '.':
-      if (total && !total.split('').includes('.')) total = `${total}.`;
+      if (total && !total.split('').includes('.') && !operation) total = `${total}.`;
       else if (next && !next.split('').includes('.')) next = `${next}.`;
       else next = '0.';
       break;
     case '=':
+      if (total && operation === '%') {
+        total = operate(total, next, operation);
+        next = null;
+        operation = null;
+      }
       if (total && next) {
         total = operate(total, next, operation);
         next = null;
@@ -37,8 +45,11 @@ const calculate = (calculator, btnName) => {
       break;
 
     default:
-      if (operation) total += btnName;
-      else next += btnName;
+      if (operation) {
+        next = next === null ? btnName : next + btnName;
+      } else {
+        total = total === null ? btnName : total + btnName;
+      }
   }
 
   return { total, next, operation };
