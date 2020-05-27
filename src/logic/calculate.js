@@ -32,6 +32,11 @@ const calculate = (calculator, btnName) => {
       else next = '0.';
       break;
     case '=':
+      if (total && operation === '%') {
+        total = operate(total, next, operation);
+        next = null;
+        operation = null;
+      }
       if (total && next) {
         total = operate(total, next, operation);
         next = null;
