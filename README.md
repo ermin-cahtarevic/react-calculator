@@ -16,7 +16,7 @@
 
 In this project, I created a calculator using React for a fictional company named "Math-magicians"
 
-Live version of the project: [Live version](https://react-calculator-ermin.herokuapp.com/)
+Live version of the project: [Live version](https://react-calculator-ermin.netlify.app/)
 
 Project Link: [React-Calculator](https://github.com/ermin-cahtarevic/react-calculator)
 
